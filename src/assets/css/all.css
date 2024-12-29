@@ -619,6 +619,15 @@ a {
   background-color: rgba(72, 160, 240, 0.8);
   border-radius: 50%;
 }
+.member-item-history .member-history-content .history-list .history-page-ctrl a.now, .member-item-history .member-history-content .history-list .history-page-ctrl a:hover {
+  background-color: rgba(240, 72, 237, 0.8);
+}
+.member-item-history .member-history-content .history-list .history-page-ctrl .page_number {
+  display: flex;
+}
+.member-item-history .member-history-content .history-list .history-page-ctrl .page_number span {
+  font-size: 18px;
+}
 
 /*memberHistory結束*/
 /*------main結束------*/
