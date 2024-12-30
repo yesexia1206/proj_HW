@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 export default function Login() {
     return (
@@ -10,7 +11,7 @@ export default function Login() {
                             <input type="password" name="password" id="password" title="輸入密碼" placeholder="密碼" />
                             <a href="">忘記密碼？</a>
 
-                            <button id="submit-btn" type="submit">登入</button>
+                            <button id="submit-btn" type="submit"><Link to='/memberCenter'>登入</Link></button>
 
                             <div className="rembr-me">
                                 <input type="checkbox" name="rembr-me" id="rembr-me" title="記住我" />
@@ -23,9 +24,11 @@ export default function Login() {
                             <p>沒有<span>HAPPY WORK</span>會員？</p>
                         </div>
                         <div className="btn-div">
-                            <button id="register-btn">
-                                <a href="">點我註冊</a>
-                            </button>
+                            <Link to='/signUp'>
+                                <button id="register-btn">
+                                    點我註冊
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

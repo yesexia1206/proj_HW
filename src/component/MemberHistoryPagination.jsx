@@ -1,6 +1,19 @@
 import { useState } from "react";
+import styles from "../assets/css/body.module.css";
+import { useEffect } from "react";
 
 export default function MemberHistoryPagination() {
+
+    useEffect(() => {
+            // 設置 body 的樣式
+            document.body.classList.add(styles.bodycolor1);
+    
+            // 清理時移除樣式，防止影響其他組件
+            return () => {
+                document.body.classList.remove(styles.bodycolor1);
+            };
+        }, []);
+        
     // 分頁相關 state
     const [currentPage, setCurrentPage] = useState(1); // 當前頁數
     const totalPage = 30; // 總頁數（此處以 10 為例）

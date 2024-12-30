@@ -1,16 +1,30 @@
+import { Link } from "react-router-dom";
+import styles from "../assets/css/body.module.css";
+import { useEffect } from "react";
 
 export default function MemberItem() {
+
+    useEffect(() => {
+            // 設置 body 的樣式
+            document.body.classList.add(styles.bodycolor1);
+    
+            // 清理時移除樣式，防止影響其他組件
+            return () => {
+                document.body.classList.remove(styles.bodycolor1);
+            };
+        }, []);
+        
     return (
         <main>
             <div className="member-item-page">
                 <div className="member-item">
                     <div className="item">
                         <img src="./images/history-icon.svg" alt="" />
-                        <a href="#">租賃紀錄</a>
+                        <Link to='/memberHistory'>租賃紀錄</Link>
                     </div>
                     <div className="item">
                         <img src="./images/person-icon.svg" alt="" />
-                        <a href="#">個人資料</a>
+                        <Link to='/memberItem'>個人資料</Link>
                     </div>
                 </div>
                 <div className="member-item-content">

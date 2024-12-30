@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import MemberHistoryPagination from "../component/MemberHistoryPagination";
 
 export default function MemberHistory() {
@@ -91,11 +92,11 @@ export default function MemberHistory() {
                 <div className="member-item">
                     <div className="item">
                         <img src="./images/history-icon.svg" alt="" />
-                        <a href="#">租賃紀錄</a>
+                        <Link to='/memberHistory'>租賃紀錄</Link>
                     </div>
                     <div className="item">
                         <img src="./images/person-icon.svg" alt="" />
-                        <a href="#">個人資料</a>
+                        <Link to='/memberItem'>個人資料</Link>
                     </div>
                 </div>
                 
