@@ -4,8 +4,11 @@ import MemberHistoryPagination from "../component/MemberHistoryPagination";
 
 export default function MemberHistory() {
 
-    // 定義一個 state 來儲存租賃紀錄資料
+    // 定義 state 來儲存租賃紀錄資料與當前頁數
     const [historyData, setHistoryData] = useState([]);
+
+    const [currentPage, setCurrentPage] = useState(1); // 當前頁數
+    const itemsPerPage = 8; // 每頁顯示的資料數量
 
     // 使用 useEffect 模擬從後端抓取資料
     useEffect(() => {
@@ -76,6 +79,486 @@ export default function MemberHistory() {
                     amount: 180000,
                     paymentStatus: "已付清",
                 },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "已付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
+                {
+                    date: "2024-12-18",
+                    duration: "180天",
+                    plan: "私人辦公室",
+                    location: "小綠洲",
+                    amount: 180000,
+                    paymentStatus: "未付清",
+                },
                 // ...可以新增更多資料
             ];
             // 將資料更新到 state
@@ -85,6 +568,11 @@ export default function MemberHistory() {
         // 呼叫 fetchData 函式模擬資料抓取
         fetchData();
     }, []);
+
+    // 計算當前頁顯示的資料範圍
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const currentData = historyData.slice(startIndex, endIndex);
 
     return (
         <main>
@@ -99,7 +587,7 @@ export default function MemberHistory() {
                         <Link to='/memberItem'>個人資料</Link>
                     </div>
                 </div>
-                
+
                 <div className="member-history-content">
                     <div className="history-list">
                         {/* 表頭 */}
@@ -115,7 +603,7 @@ export default function MemberHistory() {
                         </div>
 
                         {/* 動態渲染每筆租賃紀錄 */}
-                        {historyData.map((item, index) => (
+                        {currentData.map((item, index) => (
                             <div className="history-list-data" key={index}>
                                 <p>{item.date}</p>
                                 <p>{item.duration}</p>
@@ -127,19 +615,11 @@ export default function MemberHistory() {
                         ))}
 
                         {/* 分頁控制 */}
-                        {/* <div className="history-page-ctrl">
-                            <a href="">
-                                <img src="./images/chevron_left_l.svg" alt="" />
-                            </a>
-                            <a href="">1</a>
-                            <a href="">2</a>
-                            <a href="">3</a>
-                            ‧ ‧ ‧
-                            <a href="">
-                                <img src="./images/chevron_right_l.svg" alt="" />
-                            </a>
-                        </div> */}
-                        <MemberHistoryPagination />
+                        <MemberHistoryPagination
+                            currentPage={currentPage}
+                            totalPage={Math.ceil(historyData.length / itemsPerPage)}
+                            onPageChange={setCurrentPage}
+                        />
                     </div>
                 </div>
             </div>

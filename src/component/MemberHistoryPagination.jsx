@@ -1,22 +1,16 @@
-import { useState } from "react";
-import styles from "../assets/css/body.module.css";
 import { useEffect } from "react";
+import styles from "../assets/css/body.module.css";
 
-export default function MemberHistoryPagination() {
-
+export default function MemberHistoryPagination({ currentPage, totalPage, onPageChange }) {
     useEffect(() => {
-            // 設置 body 的樣式
-            document.body.classList.add(styles.bodycolor1);
-    
-            // 清理時移除樣式，防止影響其他組件
-            return () => {
-                document.body.classList.remove(styles.bodycolor1);
-            };
-        }, []);
-        
-    // 分頁相關 state
-    const [currentPage, setCurrentPage] = useState(1); // 當前頁數
-    const totalPage = 30; // 總頁數（此處以 10 為例）
+        // 設置 body 的樣式
+        document.body.classList.add(styles.bodycolor1);
+
+        // 清理時移除樣式，防止影響其他組件
+        return () => {
+            document.body.classList.remove(styles.bodycolor1);
+        };
+    }, []);
 
     // 產生分頁按鈕的函式
     const createPageButton = (pageNumber) => {
@@ -27,7 +21,7 @@ export default function MemberHistoryPagination() {
                 href="#"
                 onClick={(e) => {
                     e.preventDefault(); // 防止預設行為
-                    setCurrentPage(pageNumber); // 更新當前頁數
+                    onPageChange(pageNumber); // 更新當前頁數
                 }}
             >
                 {pageNumber}
@@ -96,15 +90,6 @@ export default function MemberHistoryPagination() {
         );
     };
 
-    // 上一頁與下一頁按鈕
-    const prevPage = () => {
-        if (currentPage > 1) setCurrentPage(currentPage - 1);
-    };
-
-    const nextPage = () => {
-        if (currentPage < totalPage) setCurrentPage(currentPage + 1);
-    };
-
     return (
         <div className="history-page-ctrl">
             {/* 上一頁按鈕 */}
@@ -112,7 +97,8 @@ export default function MemberHistoryPagination() {
                 href="#"
                 onClick={(e) => {
                     e.preventDefault();
-                    prevPage();
+                    // 上一頁
+                    if (currentPage > 1) onPageChange(currentPage - 1);
                 }}
                 className={currentPage === 1 ? "disabled" : ""}
             >
@@ -127,12 +113,14 @@ export default function MemberHistoryPagination() {
                 href="#"
                 onClick={(e) => {
                     e.preventDefault();
-                    nextPage();
+                    // 下一頁
+                    if (currentPage < totalPage) onPageChange(currentPage + 1);
                 }}
                 className={currentPage === totalPage ? "disabled" : ""}
             >
                 <img src="./images/chevron_right_l.svg" alt="下一頁" />
             </a>
         </div>
-    )
+    );
 }
+
