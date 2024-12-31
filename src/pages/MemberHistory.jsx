@@ -610,7 +610,7 @@ export default function MemberHistory() {
                                 <p>{item.plan}</p>
                                 <p>{item.location}</p>
                                 <p>{item.amount}</p>
-                                <p className="pay">{item.paymentStatus}</p>
+                                <p className={item.paymentStatus === '已付清' ? "pay" : "nopay"}>{item.paymentStatus}</p>
                             </div>
                         ))}
 

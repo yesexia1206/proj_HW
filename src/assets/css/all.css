@@ -612,6 +612,11 @@ a {
   border: 1px solid #30a900;
   border-radius: 25px;
 }
+.member-item-history .member-history-content .history-list .history-list-data .nopay {
+  line-height: 30px;
+  border: 1px solid red;
+  border-radius: 25px;
+}
 .member-item-history .member-history-content .history-list .history-page-ctrl {
   display: flex;
   justify-content: center;

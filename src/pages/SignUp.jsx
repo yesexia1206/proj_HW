@@ -9,6 +9,11 @@ export default function SignUp() {
         setStep(step + 1);
     };
 
+    const[formData,setFormData]=useState({
+        name:'',sex:'',tel:'',email:'',date:'',userid:'',userpassword:'',userpasswordChk:'',agreeRules:false,
+    });
+    console.log(formData);
+
     const [isStyleVh100, setIsStyleVh100] = useState(false);
 
     useEffect(() => {
@@ -43,40 +48,80 @@ export default function SignUp() {
                     </div>
 
                     {step === 1 &&
-                        <form action="" className="member-form" method="post">
+                        <form action="" className="member-form" method="post" 
+                        onSubmit={(e)=>{
+                            e.preventDefault();
+                            nextStep();
+                        }}>
                             <div className="div-name-sex">
                                 <div className="div-name">
                                     <p><span className="required">必填</span>姓名</p>
-                                    <input type="text" id="member-name" name="member-name" required />
+                                    <input type="text" id="member-name" name="member-name" required 
+                                    value={formData.name}
+                                    onChange={(e)=>{
+                                        setFormData({...formData,name:e.target.value})
+                                    }}/>
                                 </div>
 
                                 <div className="div-sex">
                                     <p>性別</p>
                                     <div>
-                                        <input type="radio" id="sex-female" name="sex" value="sex-female" />
+                                        <input type="radio" id="sex-female" name="sex" value="female"
+                                        checked={formData.sex==="female"}
+                                        onChange={(e)=>{
+                                            setFormData({...formData,sex:e.target.value})
+                                        }}/>
                                         <label htmlFor="sex-female">女士</label>
-                                        <input type="radio" id="sex-male" name="sex" value="sex-male" />
+                                        <input type="radio" id="sex-male" name="sex" value="male" 
+                                        checked={formData.sex==="male"}
+                                        onChange={(e)=>{
+                                            setFormData({...formData,sex:e.target.value})
+                                        }}/>
                                         <label htmlFor="sex-male">男士</label>
                                     </div>
                                 </div>
                             </div>
 
                             <p className="magn-l-b">電話</p>
-                            <input type="tel" id="tel" name="tel" />
+                            <input type="tel" id="tel" name="tel"
+                            value={formData.tel}
+                            onChange={(e)=>{
+                                setFormData({...formData,tel:e.target.value})
+                            }}/>
 
                             <p><span className="required">必填</span>電子信箱</p>
-                            <input type="email" id="email" name="email" required />
+                            <input type="email" id="email" name="email" required 
+                            value={formData.email}
+                            onChange={(e)=>{
+                                setFormData({...formData,email:e.target.value})
+                            }}/>
 
                             <p><span className="required">必填</span>生日</p>
-                            <input type="date" id="date" name="date" required />
+                            <input type="date" id="date" name="date" required 
+                            value={formData.date}
+                            onChange={(e)=>{
+                                setFormData({...formData,date:e.target.value})
+                            }}/>
 
                             <p><span className="required">必填</span>帳號</p>
-                            <input type="text" id="userid" name="userid" required />
+                            <input type="text" id="userid" name="userid" required 
+                            value={formData.userid}
+                            onChange={(e)=>{
+                                setFormData({...formData,userid:e.target.value})
+                            }}/>
 
                             <p><span className="required">必填</span>密碼</p>
-                            <input type="password" id="userpassword" name="userpassword" required />
+                            <input type="password" id="userpassword" name="userpassword" required 
+                            value={formData.userpassword}
+                            onChange={(e)=>{
+                                setFormData({...formData,userpassword:e.target.value})
+                            }}/>
                             <p><span className="required">必填</span>密碼確認</p>
-                            <input type="password" id="userpassword-chk" name="userpassword-chk" required />
+                            <input type="password" id="userpassword-chk" name="userpassword-chk" required 
+                            value={formData.userpasswordChk}
+                            onChange={(e)=>{
+                                setFormData({...formData,userpasswordChk:e.target.value})
+                            }}/>
 
                             <div className="div-chk-rule">
                                 <input type="checkbox" name="chk-rule" id="chk-rule" required />
@@ -88,9 +133,7 @@ export default function SignUp() {
                                 </label>
                             </div>
 
-                            <input type="submit" id="submit-btn" value="送出註冊"
-                                onClick={nextStep}
-                            />
+                            <input type="submit" id="submit-btn" value="送出註冊"/>
                         </form>
                     }
                     {step === 2 && <SignUpVerify onNext={nextStep}/>}
