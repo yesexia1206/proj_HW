@@ -14,7 +14,7 @@ export default function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Login />}></Route>
+        <Route index element={<Login />}></Route>
         <Route path="/memberCenter" element={<MemberCenter />}></Route>
         <Route path="/memberItem" element={<MemberItem />}></Route>
         <Route path="/memberHistory" element={<MemberHistory />}></Route>

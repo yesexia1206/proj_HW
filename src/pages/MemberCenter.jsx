@@ -25,7 +25,7 @@ export default function MemberCenter() {
                     <div className="memter-center-content">
                         <div className="member-wrap">
                             <h3>我的帳戶</h3>
-                            <img src="./images/member-img.svg" alt="" />
+                            <img src="../images/member-img.svg" alt="" />
                             <div className="member-data">
                                 <p>姓名：工作者</p>
                                 <p>連絡電話：0987654321</p>
@@ -35,11 +35,11 @@ export default function MemberCenter() {
 
                         <div className="member-item">
                             <div className="item">
-                                <img src="./images/history-icon.svg" alt="" />
+                                <img src="../images/history-icon.svg" alt="" />
                                 <Link to='/memberHistory'>租賃紀錄</Link>
                             </div>
                             <div className="item">
-                                <img src="./images/person-icon.svg" alt="" />
+                                <img src="../images/person-icon.svg" alt="" />
                                 <Link to='/memberItem'>個人資料</Link>
                             </div>
                         </div>

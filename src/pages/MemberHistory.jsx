@@ -579,11 +579,11 @@ export default function MemberHistory() {
             <div className="member-item-history">
                 <div className="member-item">
                     <div className="item">
-                        <img src="./images/history-icon.svg" alt="" />
+                        <img src="../images/history-icon.svg" alt="" />
                         <Link to='/memberHistory'>租賃紀錄</Link>
                     </div>
                     <div className="item">
-                        <img src="./images/person-icon.svg" alt="" />
+                        <img src="../images/person-icon.svg" alt="" />
                         <Link to='/memberItem'>個人資料</Link>
                     </div>
                 </div>
@@ -593,7 +593,7 @@ export default function MemberHistory() {
                         {/* 表頭 */}
                         <div className="history-list-item">
                             <p className="df-alic">
-                                日期<img src="./images/arrow_drop_down_l.svg" alt="" />
+                                日期<img src="../images/arrow_drop_down_l.svg" alt="" />
                             </p>
                             <p>使用時間</p>
                             <p>方案類型</p>

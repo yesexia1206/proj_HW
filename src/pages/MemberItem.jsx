@@ -19,11 +19,11 @@ export default function MemberItem() {
             <div className="member-item-page">
                 <div className="member-item">
                     <div className="item">
-                        <img src="./images/history-icon.svg" alt="" />
+                        <img src="../images/history-icon.svg" alt="" />
                         <Link to='/memberHistory'>租賃紀錄</Link>
                     </div>
                     <div className="item">
-                        <img src="./images/person-icon.svg" alt="" />
+                        <img src="../images/person-icon.svg" alt="" />
                         <Link to='/memberItem'>個人資料</Link>
                     </div>
                 </div>
@@ -31,7 +31,7 @@ export default function MemberItem() {
                     <div className="revise-wrap">
                         <button className="revise-btn">
                             修改資料
-                            <img src="./images/revise-icon.svg" alt="" />
+                            <img src="../images/revise-icon.svg" alt="" />
                         </button>
                     </div>
                     <form action="" className="member-form" method="post">

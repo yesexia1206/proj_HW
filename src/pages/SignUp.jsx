@@ -37,11 +37,11 @@ export default function SignUp() {
                         <div className={step===1?"processNow":"process"}>
                             <p>輸入資料</p>
                         </div>
-                        <img src="./images/arrow_icon.svg" alt="" className="arrow-icon" />
+                        <img src="../images/arrow_icon.svg" alt="" className="arrow-icon" />
                         <div className={step===2?"processNow":"process"}>
                             <p>驗證</p>
                         </div>
-                        <img src="./images/arrow_icon.svg" alt="" className="arrow-icon" />
+                        <img src="../images/arrow_icon.svg" alt="" className="arrow-icon" />
                         <div className={step===3?"processNow":"process"}>
                             <p>註冊成功</p>
                         </div>
